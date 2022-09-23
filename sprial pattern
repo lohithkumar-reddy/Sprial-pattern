@@ -1,0 +1,14 @@
+n = int(input())
+size = (2 * n) - 1
+x = [[0 for i in range(size)] for j in range(size)]
+for i in range(n):
+    for j in range(i, size - i):
+        x[i][j] = n
+        x[size - 1 - i][j] = n
+        x[j][i] = n
+        x[j][size - 1 - i] = n
+    n -= 1
+for i in range(size):
+    for j in range(size):
+        print(x[i][j], end='')
+    print()#python
